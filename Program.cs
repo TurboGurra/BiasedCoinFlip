@@ -24,7 +24,7 @@ namespace biased_coin_flip
                 heads = 1;
                 tails = 1;
 
-                for (int i = 0; i < 100; i++)
+                for (int i = 0; i < 1000; i++)
                 {
                     //if (random.Next(2) == 0) //utan balansering
                     if (random.Next(1, heads + tails) < heads) //med balansering
