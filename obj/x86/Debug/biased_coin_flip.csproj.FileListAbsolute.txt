@@ -1,0 +1,5 @@
+C:\Users\Gurra\Desktop\biased_coin_flip\bin\Debug\biased_coin_flip.exe
+C:\Users\Gurra\Desktop\biased_coin_flip\bin\Debug\biased_coin_flip.pdb
+C:\Users\Gurra\Desktop\biased_coin_flip\obj\x86\Debug\biased_coin_flip.exe
+C:\Users\Gurra\Desktop\biased_coin_flip\obj\x86\Debug\biased_coin_flip.pdb
+C:\Users\Gurra\Desktop\biased_coin_flip\obj\x86\Debug\biased_coin_flip.csprojResolveAssemblyReference.cache
