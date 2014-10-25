@@ -10,25 +10,36 @@ namespace biased_coin_flip
         static void Main(string[] args) 
         {
             /*
-             * Detta program är fungerar som en vanlig slantslingning,
+             * Detta program fungerar som en vanlig slantslingning,
              * förutom att sidan som har hamnat uppåt flest gånger har
-             * en mindre chans att hamna uppåt nästa gång än den andra sidan
-             * beroende på skillnaden mellan sidornas "poäng"
+             * en mindre chans att hamna uppåt nästa gång än den andra sidan,
+             * vilket beror på skillnaden mellan sidornas "poäng"
              */
             int heads = 1, tails = 1;
             Random random = new Random();
+            ConsoleKeyInfo cki;
 
-            for (int i = 0; i < 1000; i++)
+            while(true)
             {
-                //if (random.Next(2) == 0) //Utan balansering
-                if (random.Next(1, heads + tails) < heads)
-                    tails++;
-                else
-                    heads++;
-            }
+                heads = 1;
+                tails = 1;
 
-            Console.WriteLine("heads = {0}\ntails = {1}", heads-1, tails-1);
-            Console.ReadKey();
+                for (int i = 0; i < 100; i++)
+                {
+                    //if (random.Next(2) == 0) //utan balansering
+                    if (random.Next(1, heads + tails) < heads) //med balansering
+                        tails++;
+                    else
+                        heads++;
+                }
+
+                Console.WriteLine("heads = {0}\ntails = {1}", heads-1, tails-1);
+                cki = Console.ReadKey();
+                if (cki.Key == ConsoleKey.Spacebar)
+                    Console.Clear();
+                else
+                    break;
+            }
         }
     }
 }
